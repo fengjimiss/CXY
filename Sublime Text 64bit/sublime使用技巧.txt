@@ -1,0 +1,74 @@
+﻿sublime使用技巧
+
+1:安装漂亮的编程字体
+http://pan.baidu.com/s/1xMex9 下载"程序编写字体 – Yahei Consolas Hybrid",
+双击安装
+
+2:解压sublime到你的程序目录,如D:/programe files/
+
+3:ctrl+b打开浏览器,如果你已经安装apache,nginx等,并假设你的www目录为D:\\www\\
+
+编辑sublime Text/Data/Packages/User/open_broswer.py
+url_map = {
+    'D:\\www\\' : 'http://localhost/',
+}
+
+[注意] D:\\www\\应为你的localhost指向的真实目录
+
+然后!!
+点击-->Preferences->Key Bindings->User
+在出现的界面中,加入如下内容(如果已经有就不用再加了):
+[
+{ "keys": ["ctrl+b"], "command": "open_browser" }
+]
+
+
+4:安装PHP语法提示(可以到学PHP时配置此步)
+工具栏:Preferences->Package Settings->SublimeLinter->Settings - User
+{"sublimelinter": true,
+	"sublimelinter_executable_map":
+	{
+	     "php":"D:\\amp\\php\\php.exe" #把左边的地址替换为你实际的php.exe的地址
+	}
+}
+
+
+4:sublime的快捷键
+ctrl+l	选择整行(按住-继续选择下行)
+ctrl+kk 从光标处删除至行尾
+ctrl+shift+k 删除整行
+ctrl+shift+d 复制光标所在整行，插入在该行之前
+ctrl+j 合并行(已选择需要合并的多行时)
+ctrl+ku 改为大写
+ctrl+kl 改为小写
+ctrl+kl 改为小写
+ctrl+d 选词(按住-继续选择下个相同的字符串)
+ctrl+m 光标移动至括号内开始或结束的位置
+ctrl+shift+m 选择括号内的内容(按住-继续选择父括号)
+ctrl+/ 注释整行(如已选择内容，同“ctrl+shift+/”效果)
+ctrl+shift+/ 注释已选择内容
+ctrl+space 自动完成(win与系统快捷键冲突，需修改)
+ctrl+z 撤销
+ctrl+y 恢复撤销
+ctrl+shift+v 粘贴并自动缩进(其它兄弟写的，实测win系统自动缩进无效)
+ctrl+m 光标跳至对应的括号
+alt+. 闭合当前标签
+ctrl+shift+a 选择光标位置父标签对儿
+ctrl+shift+[折叠代码
+ctrl+shift+] 展开代码
+ctrl+kt 折叠属性
+ctrl+k0 展开所有
+ctrl+u 软撤销
+ctrl+t 词互换
+ctrl+enter 插入行后
+ctrl+shift enter 插入行前
+ctrl+k backspace 从光标处删除至行首
+ctrl+shift+up 与上行互换
+ctrl+shift+down 与下行互换
+shift+tab 去除缩进
+tab 缩进
+F9 行排序(按a-z)
+
+5:祝你学习顺利!
+
+－－－from 十八哥
